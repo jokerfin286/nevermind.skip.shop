@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-logo">
+            <img src="logo2.png" alt="Логотип">
+        </div>
+    </div>
+    <div id="content" class="hidden">
+        <header>
+            <div class="header-container">
+                <div class="menu-icon" onclick="toggleSidebar()">
+                    <img src="menu.png" alt="Menu">
+                </div>
+                <div class="logo">
+                    <img src="logo2.png" alt="Логотип nevermind.skip.shop">
+                </div>
+                <nav>
+                    <ul class="desktop-menu">
+                        <li><a href="https://t.me/zxc_nevermind"><img src="Telegram.png" alt="Telegram"></a></li>
+                        <li><a href="https://www.twitch.tv/nevermindk1d"><img src="twitch.png" alt="Twitch"></a></li>
+                        <li><a href="#cart"><img src="shop.png" alt="Корзина"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu hidden">
+                <ul>
+                    <li><a href="https://t.me/zxc_nevermind">Telegram</a></li>
+                    <li><a href="https://www.twitch.tv/nevermindk1d">Twitch</a></li>
+                    <li><a href="#cart">Корзина</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <div class="close-button-container">
+                <a href="javascript:void(0)" class="close-button" onclick="toggleSidebar()">×</a>
+            </div>
+            <ul>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="about_us.html" class="active">О нас</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+            <div class="footer1">
+                <b>© Сделано nevermindk1d'ом</b>
+            </div>
+        </div>
+
+        <div class="content-dimmed" id="content-dimmed" onclick="toggleSidebar()"></div>
+
+        <div class="section header">
+            <div class="content">
+                <div class="hikikamori1"><h1>nevermind.skip.shop</h1></div>
+                <p>Бренд, созданный для обеспечивания гулей вещами. Я нацелен делать не только красиво, но и очень качественно. Моя мечта осчастливить каждого из вас и я хочу сделать поиск годных вещей проще!</p>
+            </div>
+        </div>
+
+        <div class="section chat">
+            <div class="message left">
+                <div class="author">nevermindk1d:</div>
+                <div class="text">А также я всегда мечтал..</div>
+            </div>
+            <div class="message right">
+                <div class="author">ЧЕЛ:</div>
+                <div class="text">О чём же?</div>
+            </div>
+            <div class="message left">
+                <div class="author">nevermindk1d:</div>
+                <div class="text">Создать свой магазин и помочь людям сделать свой уникальный и качественный гардероб!</div>
+            </div>
+            <div class="message right">
+                <div class="author">ЧЕЛ:</div>
+                <div class="text">Расскажи!</div>
+            </div>
+            <div class="message left">
+                <div class="author">nevermindk1d:</div>
+                <div class="text">Продолжать развиваться и продавать качественные и уникальные продукты.</div>
+            </div>
+            <div class="message right">
+                <div class="author">ЧЕЛ:</div>
+                <div class="text">Это замечательно!</div>
+            </div>
+            <div class="message left">
+                <div class="author">nevermindk1d:</div>
+                <div class="text">Спасибо!</div>
+            </div>
+        </div>
+
+        <div class="section portfolio">
+            <div class="item active" onclick="selectItem(this)">
+                <img src="shadow-fiend.gif" alt="Savagemode">
+                <div class="description">
+                    <h2>Shadow Fiend</h2>
+                    <p>Могу трахнуть и съебать</p>
+                    <button>Еще работы</button>
+                </div>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+                <img src="shadow-fiend.gif" alt="Кейс ILOVE">
+                <div class="description">
+                    <h2>Shadow Fiend</h2>
+                    <p>1000-7?</p>
+                </div>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+                <img src="shadow-fiend.gif" alt="Шарфы">
+                <div class="description">
+                    <h2>Shadow Fiend</h2>
+                    <p>Love give only pain and fear</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleSidebar() {
+                var sidebar = document.getElementById('sidebar');
+                var contentDimmed = document.getElementById('content-dimmed');
+                if (sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                    contentDimmed.classList.remove('active');
+                } else {
+                    sidebar.classList.add('open');
+                    contentDimmed.classList.add('active');
+                }
+            }
+        </script>
+        <script src="scripts.js"></script>
+    </div>
+</body>
+</html>
