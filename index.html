@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nevermind.skip.shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+London&display=swap">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-logo">
+            <img src="logo2.png" alt="Логотип">
+        </div>
+    </div>
+    <div id="content" class="hidden">
+        <header>
+            <div class="header-container">
+                <div class="menu-icon" onclick="toggleSidebar()">
+                    <img src="menu.png" alt="Menu">
+                </div>
+                <div class="logo">
+                    <img src="logo2.png" alt="Логотип nevermind.skip.shop">
+                </div>
+                <nav>
+                    <ul class="desktop-menu">
+                        <li><a href="https://t.me/zxc_nevermind"><img src="Telegram.png" alt="Telegram"></a></li>
+                        <li><a href="https://www.twitch.tv/nevermindk1d"><img src="twitch.png" alt="Twitch"></a></li>
+                        <li><a href="javascript:void(0)" onclick="toggleCartSidebar()"><img src="shop.png" alt="Корзина"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu hidden">
+                <ul>
+                    <li><a href="https://t.me/zxc_nevermind">Telegram</a></li>
+                    <li><a href="https://www.twitch.tv/nevermindk1d">Twitch</a></li>
+                    <li><a href="javascript:void(0)" onclick="toggleCartSidebar()"><img src="shop.png" alt="Корзина"></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <div class="close-button-container">
+                <a href="javascript:void(0)" class="close-button" onclick="toggleSidebar()">×</a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about_us.html">О нас</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+            <div class="footer1">
+                <b>© Сделано nevermindk1d'ом</b>
+            </div>
+        </div>
+
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-close-button-container">
+                <a href="javascript:void(0)" class="cart-close-button" onclick="toggleCartSidebar()">&#10006;</a>
+            </div>
+            <h2>Ваш заказ:</h2>
+            <div id="cart-items">
+                <!-- Товары в корзине будут добавлены динамически -->
+            </div>
+            <div class="cart-total">
+                <div class="total-label">Сумма:</div>
+                <div id="total-price" class="total-price">0.00 BYN</div>
+            </div>
+            <button class="checkout-button" id="checkout-button"><a href="Pay.html" style="text-decoration: none; color: white;">Оформить</a></button>
+        </div>
+
+        <div class="content-dimmed" id="content-dimmed" onclick="toggleSidebar()"></div>
+        <div class="cart-content-dimmed" id="cart-content-dimmed" onclick="toggleCartSidebar()"></div>
+
+        <main>
+            <section class="banner">
+                <h1>NEVERMIND.SKIP.SHOP</h1>
+            </section>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                    <span>nevermind.skip.shop</span>
+                </div>
+            </div>
+            <!-- Search and Sort Container -->
+            <div class="search-sort-container">
+                <input type="text" id="search-input" placeholder="Поиск" class="search-input">
+                <select id="sort-select" class="sort-select">
+                    <option value="default">Порядок: по умолчанию</option>
+                    <option value="price-asc">Цена: по возрастанию</option>
+                    <option value="price-desc">Цена: по убыванию</option>
+                    <option value="name-asc">Название: A—Я</option>
+                    <option value="name-desc">Название: Я—A</option>
+                    <option value="newest">Порядок: сперва новые</option>
+                    <option value="oldest">Порядок: сперва старые</option>
+                </select>
+            </div>
+            <section class="products" id="products">
+                <div class="product" data-name="enemy system hoodie black" data-price="115" data-date="2023-06-01">
+                    <a href="hoodie-enemy.html" style="text-decoration: none; color: black;">
+                        <img src="hodie/Hodie_enemy.png" alt="enemy system hoodie black" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="enemy system hoodie black back" class="product-img-hover">
+                        <p>enemy system hoodie black</p>
+                        <p class="price-new"><span class="old-price">300 byn</span> 115 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="enemy system long sleeve" data-price="177" data-date="2023-05-01">
+                    <a href="enemy-longsleeve.html" style="text-decoration: none; color: black;">
+                        <img src="longsleeve/enemy_longsleeve.png" alt="enemy system long sleeve" class="product-img">
+                        <img src="longsleeve/enemy_longsleeve_back.png" alt="enemy system long sleeve back" class="product-img-hover">
+                        <p>enemy system long sleeve</p>
+                        <p class="price-new"><span class="old-price">270 byn</span> 177 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="t-shirt the hate" data-price="77" data-date="2023-04-01">
+                    <a href="t-shirt the hate.html" style="text-decoration: none; color: black;">
+                    <img src="t-shirt/t-shirt the hate.jpg" alt="t-shirt the hate" class="product-img">
+                    <img src="t-shirt/t-shirt the hate_back.jpg" alt="t-shirt the hate back" class="product-img-hover">
+                    <p>t-shirt the hate</p>
+                    <p class="price-new"><span class="old-price">100 byn</span> 77 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="t-shirt gen'ei ryodan" data-price="107" data-date="2023-03-01">
+                    <a href="t-shirt gen'ei ryodan.html" style="text-decoration: none; color: black;">
+                        <img src="t-shirt/t-shirt gen'ei ryodan.jpg" alt="t-shirt gen'ei ryodan" class="product-img">
+                        <img src="t-shirt/t-shirt gen'ei ryodan_back.jpg" alt="t-shirt gen'ei ryodan back" class="product-img-hover">
+                        <p>T-shirt t-shirt gen'ei ryodan</p>
+                        <p class="price">107 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="pants theory of ideology" data-price="390" data-date="2023-02-01">
+                    <a href="pants theory of ideology.html" style="text-decoration: none; color: black;">
+                    <img src="pants/pants theory of ideology.jpg" alt="pants theory of ideology" class="product-img">
+                    <img src="pants/pants theory of ideology_back.jpg" alt="pants theory of ideology back" class="product-img-hover">
+                    <p>pants theory of ideology</p>
+                    <p class="price">390 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="Jacket theory of ideology" data-price="710" data-date="2023-01-01">
+                    <a href="Jacket theory of ideology.html" style="text-decoration: none; color: black;">
+                    <img src="jacket/Jacket theory of ideology.jpg" alt="Jacket theory of ideology" class="product-img">
+                    <img src="jacket/Jacket theory of ideology_back.jpg" alt="Jacket theory of ideology back" class="product-img-hover">
+                    <p>Jacket theory of ideology</p>
+                    <p class="price">710 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="SWYPE Socks" data-price="9" data-date="2022-12-01">
+                    <a href="swype_socks.html" style="text-decoration: none; color: black;">
+                    <img src="socs/SWYPE.png" alt="SWYPE" class="product-img">
+                    <img src="socs/SWYPE2.png" alt="SWYPE 2" class="product-img-hover">
+                    <p>SWYPE Socks</p>
+                    <p class="price">9 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="Longsleeve 1'm tired of my uselessness" data-price="160" data-date="2022-11-01">
+                    <a href="longsleeve 1'm tired of my uselessness.html" style="text-decoration: none; color: black;">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness.jpg" alt="Longsleeve 1'm tired of my uselessness" class="product-img">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness_back.jpg" alt="Longsleeve 1'm tired of my uselessness back" class="product-img-hover">
+                        <p>Longsleeve 1'm tired of my uselessness</p>
+                        <p class="price">160 byn</p>
+                    </a>
+                </div>
+                <div class="product" data-name="Battalion of bastards longsleeve" data-price="160" data-date="2022-11-01">
+                    <a href="Battalion of bastards longsleeve.html" style="text-decoration: none; color: black;">
+                        <img src="longsleeve/longsleeveBattalion of bastards longsleeve_size.png" alt="Longsleeve 1'm tired of my uselessness" class="product-img">
+                        <img src="longsleeve/longsleeveBattalion of bastards longsleeve2.png" alt="Longsleeve 1'm tired of my uselessness back" class="product-img-hover">
+                        <p>Battalion of bastards longsleeve</p>
+                        <p class="price">160 byn</p>
+                    </a>
+                </div>
+                                <div class="product" data-name="Longsleeve 1'm tired of my uselessness" data-price="160" data-date="2022-11-01">
+                    <a href="longsleeve 1'm tired of my uselessness.html" style="text-decoration: none; color: black;">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness.jpg" alt="Longsleeve 1'm tired of my uselessness" class="product-img">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness_back.jpg" alt="Longsleeve 1'm tired of my uselessness back" class="product-img-hover">
+                        <p>Longsleeve 1'm tired of my uselessness</p>
+                        <p class="price">160 byn</p>
+                    </a>
+                </div>
+                                <div class="product" data-name="Longsleeve 1'm tired of my uselessness" data-price="160" data-date="2022-11-01">
+                    <a href="longsleeve 1'm tired of my uselessness.html" style="text-decoration: none; color: black;">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness.jpg" alt="Longsleeve 1'm tired of my uselessness" class="product-img">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness_back.jpg" alt="Longsleeve 1'm tired of my uselessness back" class="product-img-hover">
+                        <p>Longsleeve 1'm tired of my uselessness</p>
+                        <p class="price">160 byn</p>
+                    </a>
+                </div>
+                                <div class="product" data-name="Longsleeve 1'm tired of my uselessness" data-price="160" data-date="2022-11-01">
+                    <a href="longsleeve 1'm tired of my uselessness.html" style="text-decoration: none; color: black;">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness.jpg" alt="Longsleeve 1'm tired of my uselessness" class="product-img">
+                        <img src="longsleeve/Longsleeve 1'm tired of my uselessness_back.jpg" alt="Longsleeve 1'm tired of my uselessness back" class="product-img-hover">
+                        <p>Longsleeve 1'm tired of my uselessness</p>
+                        <p class="price">160 byn</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <ul>
+                    <li><a href="about_us.html">О нас</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="polical.html">Privacy Policy</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="contact.html">Доставка</a></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="logo2.png" alt="Логотип">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var copy = document.querySelector(".marquee-content").cloneNode(true);
+        document.querySelector(".marquee").appendChild(copy);
+            
+        function toggleCartSidebar() {
+            document.getElementById('cart-sidebar').classList.toggle('active');
+            displayCart();
+        }
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        };
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

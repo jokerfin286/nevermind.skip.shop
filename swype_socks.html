@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWYPE SOCKS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-page">
+        <div class="close-button-container">
+            <a href="index.html" class="close-button">&#10006;</a>
+        </div>
+        <div class="left-column">
+            <div class="image-container">
+                <img id="main-image" src="socs/SWYPE.png" alt="SWYPE SOCKS" class="product-image-prod">
+                <div class="arrow-left" onclick="changeImage(-1)">&#10094;</div>
+                <div class="arrow-right" onclick="changeImage(1)">&#10095;</div>
+            </div>
+            <div class="product-gallery">
+                <img src="socs/SWYPE.png" alt="Thumbnail 1" class="thumbnail" onclick="selectImage(0)">
+                <img src="socs/SWYPE2.png" alt="Thumbnail 2" class="thumbnail" onclick="selectImage(1)">
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="product-title">SWYPE SOCKS</div>
+            <p class="price">9 byn</p>
+            <div class="size-dropdown">
+                <label for="size" class="installments">Размеры</label>
+                <select id="size">
+                    <option value="S (36-43)">S (36-43)</option>
+                    <option value="M (37-44)">M (37-44)</option>
+                </select>
+            </div>
+            <button class="buy-button" onclick="addToCart(this)" 
+                data-name="SWYPE SOCKS" 
+                data-unit-price="9.00" 
+                data-image="socs/SWYPE.png">Купить
+            </button>
+            <div class="description"><i>
+                ДАННЫЙ МЕРЧ ВЫПУЩЕН ОТ НОУНЕЙМ КОМПАНИИ НО ВЫГЛЯДЯТ ГОДНО<i>
+            <br><br>
+            </div>
+            <div>
+                <br>
+                <span class="installments">
+                Размеры: 36-42,37-44<br>
+                Рекомендации по размерам<br><br>
+                - Первый размер (S): размер стопы 36-43<br>
+                - Второй размер (M): размер стопы 37-44<br>
+                хлопок; полиамид; эластан; с рисунком длинные высокие белые<br><br>
+                Вещь Унисекс, подходит мальчикам и девочкам.
+            </div></span>
+        </div>
+    </div>
+
+    <div class="recommended-products">
+        <h2>Смотрите также</h2>
+        <div class="products-grid">
+            <div class="product">
+                <a href="product1.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Longsleeve Griffit" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Longsleeve Griffit Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">В НАЛИЧИИ</span>
+                        <p class="product-name">longsleeve griffit</p>
+                        <p class="product-price">2 890 р. <span class="old-price">4 200 р.</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product2.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Velur Long Angel" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Velur Long Angel Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">В НАЛИЧИИ</span>
+                        <p class="product-name">velur long angel</p>
+                        <p class="product-price">3 990 р. <span class="old-price">8 000 р.</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product3.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Longsleeve Itachi" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Longsleeve Itachi Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">В НАЛИЧИИ</span>
+                        <p class="product-name">longsleeve itachi</p>
+                        <p class="product-price">2 222 р. <span class="old-price">3 700 р.</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product4.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Longsleeve Juzo LEGEND+++" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Longsleeve Juzo LEGEND+++ Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">ОСТАТКИ</span>
+                        <p class="product-name">longsleeve juzo LEGEND+++</p>
+                        <p class="product-price">8 888 р. <span class="old-price">15 000 р.</span></p>
+                        <div class="sold-out">Нет в наличии</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const images = ["socs/SWYPE.png",
+"socs/SWYPE2.png"];
+        let currentImageIndex = 0;
+    
+        function changeImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+    
+        function selectImage(index) {
+            currentImageIndex = index;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+
+                window.changeImage = changeImage;
+        window.selectImage = selectImage;
+
+        window.addToCart = function(button) {
+            const name = button.getAttribute('data-name');
+            const unitPrice = button.getAttribute('data-unit-price');
+            const image = button.getAttribute('data-image');
+            const size = document.getElementById('size').value;
+            
+            let cart = localStorage.getItem('cart');
+            if (cart) {
+                cart = JSON.parse(cart);
+            } else {
+                cart = [];
+            }
+            
+            cart.push({ name, unitPrice, image, size, quantity: 1 });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            alert('Товар добавлен в корзину');
+        }
+    });
+    </script>
+</body>
+</html>

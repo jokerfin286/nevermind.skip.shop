@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-logo">
+            <img src="logo2.png" alt="Логотип">
+        </div>
+    </div>
+    <div id="content" class="hidden">
+        <header>
+            <div class="header-container">
+                <div class="menu-icon" onclick="toggleSidebar()">
+                    <img src="menu.png" alt="Menu">
+                </div>
+                <div class="logo">
+                    <img src="logo2.png" alt="Логотип nevermind.skip.shop">
+                </div>
+                <nav>
+                    <ul class="desktop-menu">
+                        <li><a href="https://t.me/zxc_nevermind"><img src="Telegram.png" alt="Telegram"></a></li>
+                        <li><a href="https://www.twitch.tv/nevermindk1d"><img src="twitch.png" alt="Twitch"></a></li>
+                        <li><a href="#cart"><img src="shop.png" alt="Корзина"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu hidden">
+                <ul>
+                    <li><a href="https://t.me/zxc_nevermind">Telegram</a></li>
+                    <li><a href="https://www.twitch.tv/nevermindk1d">Twitch</a></li>
+                    <li><a href="#cart">Корзина</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <div class="close-button-container">
+                <a href="javascript:void(0)" class="close-button" onclick="toggleSidebar()">×</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about_us.html">О нас</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+            <div class="footer1">
+                <b>© Сделано nevermindk1d'ом</b>
+            </div>
+        </div> 
+
+        <div class="content-dimmed" id="content-dimmed" onclick="toggleSidebar()"></div>
+        <main>
+            <section class="contact-info">
+                <h1>Условия оплаты и доставки.</h1>
+                <h2>Доставка идет дополнительно к цене товара.</h2>
+                <p>Форму для доставки клиент заполняет при покупке товара:</p>
+                <ol>
+                    <li>ФИО</li>
+                    <li>Страна</li>
+                    <li>Адрес</li>
+                    <li>Почтовый индекс</li>
+                    <li>Твой номер телефона</li>
+                    <li>Ссылка на соц. сети</li>
+                </ol>
+                <p>После чего товар отправляется в СДЭК до вашего пункта выдачи / курьером.</p>
+                <p class="important"><strong>ВАЖНО!</strong> Если ваша доставка <strong>свыше 200 рублей</strong>, то за нее нужно будет доплатить.</p>
+            </section>
+            
+            <section class="contacts">
+                <h2>Контакты:</h2>
+                <p><a href="https://t.me/zxc_nevermind" style="text-decoration: none; color: black;">https://t.me/zxc_nevermind</a></p>
+                <p><a href="https://www.twitch.tv/nevermindk1d" style="text-decoration: none; color: black;">https://www.twitch.tv/nevermindk1d</a></p>
+            </section>
+            
+            <section class="requisites">
+                <h2>РЕКВИЗИТЫ СЧЕТА:</h2>
+                <p>И.П. - Кобринец Кирилл Александрович</p>
+                <p>ИНН: их нет пока что :)</p>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <ul>
+                    <li><a href="about_us.html">О нас</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="polical.html">Privacy Policy</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="contact.html">Доставка</a></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="logo2.png" alt="Логотип">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var copy = document.querySelector(".marquee-content").cloneNode(true);
+        document.querySelector(".marquee").appendChild(copy);
+        
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var contentDimmed = document.getElementById('content-dimmed');
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                contentDimmed.classList.remove('active');
+            } else {
+                sidebar.classList.add('open');
+                contentDimmed.classList.add('active');
+            }
+        }
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

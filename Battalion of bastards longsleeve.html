@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battalion of bastards longsleeve</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-page">
+        <div class="close-button-container">
+            <a href="index.html" class="close-button">&#10006;</a>
+        </div>
+        <div class="left-column">
+            <div class="image-container">
+                <img id="main-image" src="longsleeve/Battalion of bastards longsleeve.png" alt="longsleeve Image" class="product-image-prod">
+                <div class="arrow-left" onclick="changeImage(-1)">&#10094;</div>
+                <div class="arrow-right" onclick="changeImage(1)">&#10095;</div>
+            </div>
+            <div class="product-gallery">
+                <img src="longsleeve/Battalion of bastards longsleeve.png" alt="Thumbnail 1" class="thumbnail" onclick="selectImage(0)">
+                <img src="longsleeve/longsleeveBattalion of bastards longsleeve2.png"  alt="Thumbnail 2" class="thumbnail" onclick="selectImage(1)">
+                <img src="longsleeve/longsleeveBattalion of bastards longsleeve1.png"  alt="Thumbnail 3" class="thumbnail" onclick="selectImage(2)">
+                <img src="longsleeve/longsleeveBattalion of bastards longsleeve3.png" alt="Thumbnail 4" class="thumbnail" onclick="selectImage(3)">
+                <img src="longsleeve/longsleeveBattalion of bastards longsleeve_size.png" alt="Thumbnail 5" class="thumbnail" onclick="selectImage(4)">
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="product-title">Battalion of bastards longsleeve</div>
+            <p class="price">287 byn</p>
+            <div class="size-dropdown">
+                <label for="size" class="installments">Размеры</label>
+                <select id="size">
+                    <option value="Low baby (160-170)">Low baby (160-170)</option>
+                    <option value="Baby (170-180)">Baby (170-180)</option>
+                    <option value="Big baby (180+)">Big baby (180+)</option>
+                </select>
+            </div>
+            <button class="buy-button" onclick="addToCart(this)" 
+                data-name="Battalion of bastards longsleeve" 
+                data-unit-price="287.00" 
+                data-image="longsleeve/Battalion of bastards longsleeve.png">Купить
+            </button>
+            <div class="description"><i>
+                Battalion of bastards Longsleeve
+            <br><br>
+                Battalion of bastards longsleeve - это уникальный лонгслев, созданная специально для поклонников музыканта и стримера Kusakabe или Hikikomori kai. Лонг выполнен из высококачественного мягкого материала, который обеспечивает комфорт и долговечность. Он имеет стильный дизайн с логотипом хикикомори кай и характерным стилем, который является отличительной особенностью творчества Джузо и Кусакабе. Лонгслив подходит как для повседневной носки, так и для особых случаев, таких как концерты или мероприятия. Будьте оригинальными и выразите свою поддержку Juzo и Кусакабе с помощью этого стильного лонга батальон.</i>
+            <br><br>
+            </div>
+            <div>
+                <span class="installments">
+                Оверсайз фит, крой OVERSIZE.<br>
+                Размеры: Low baby, Baby, Big baby<br>
+                Рекомендации по размерам<br><br>
+                - Первый размер (Low baby): рост 160 - 170<br>
+                - Второй размер (Baby): рост 170 - 180<br>
+                - Третий размер (Big baby): рост 180+<br>
+                длинные рукава. Battalion of bastartds - велюр, машинная вышивка, оверсайз-крой.<br><br>
+                Вещь Унисекс, подходит мальчикам и девочкам.
+            </div></span>
+        </div>
+    </div>
+
+    <div class="recommended-products">
+        <h2>Смотрите также</h2>
+        <div class="products-grid">
+            <div class="product">
+                <a href="product1.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Longsleeve Griffit" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Longsleeve Griffit Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">В НАЛИЧИИ</span>
+                        <p class="product-name">longsleeve griffit</p>
+                        <p class="product-price">2 890 р. <span class="old-price">4 200 р.</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product2.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Velur Long Angel" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Velur Long Angel Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">В НАЛИЧИИ</span>
+                        <p class="product-name">velur long angel</p>
+                        <p class="product-price">3 990 р. <span class="old-price">8 000 р.</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product3.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Longsleeve Itachi" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Longsleeve Itachi Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">В НАЛИЧИИ</span>
+                        <p class="product-name">longsleeve itachi</p>
+                        <p class="product-price">2 222 р. <span class="old-price">3 700 р.</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product4.html" style="text-decoration: none; color: black;">
+                    <div class="image-container">
+                        <img src="hodie/Hodie_enemy.png" alt="Longsleeve Juzo LEGEND+++" class="product-img">
+                        <img src="hodie/Hodie_enemy_back.png" alt="Longsleeve Juzo LEGEND+++ Back" class="product-img-hover">
+                    </div>
+                    <div class="product-info">
+                        <span class="availability">ОСТАТКИ</span>
+                        <p class="product-name">longsleeve juzo LEGEND+++</p>
+                        <p class="product-price">8 888 р. <span class="old-price">15 000 р.</span></p>
+                        <div class="sold-out">Нет в наличии</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const images = ["longsleeve/Battalion of bastards longsleeve.png", "longsleeve/longsleeveBattalion of bastards longsleeve2.png", "longsleeve/longsleeveBattalion of bastards longsleeve1.png", "longsleeve/longsleeveBattalion of bastards longsleeve3.png", "longsleeve/longsleeveBattalion of bastards longsleeve_size.png"];
+        let currentImageIndex = 0;
+    
+        function changeImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+    
+        function selectImage(index) {
+            currentImageIndex = index;
+            document.getElementById('main-image').src = images[currentImageIndex];
+        }
+
+                window.changeImage = changeImage;
+        window.selectImage = selectImage;
+
+        window.addToCart = function(button) {
+            const name = button.getAttribute('data-name');
+            const unitPrice = button.getAttribute('data-unit-price');
+            const image = button.getAttribute('data-image');
+            const size = document.getElementById('size').value;
+            
+            let cart = localStorage.getItem('cart');
+            if (cart) {
+                cart = JSON.parse(cart);
+            } else {
+                cart = [];
+            }
+            
+            cart.push({ name, unitPrice, image, size, quantity: 1 });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            alert('Товар добавлен в корзину');
+        }
+    });
+    </script>
+</body>
+</html>
