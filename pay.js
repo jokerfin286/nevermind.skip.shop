@@ -20,5 +20,5 @@ document.getElementById('order-form').addEventListener('submit', function(event)
     // For demo, we will just alert the user and clear the cart
     alert('Ваш заказ оформлен!');
     localStorage.removeItem('cart');
-    window.location.href = 'Index.html'; // Redirect to home or any other page
+    window.location.href = 'index.html'; // Redirect to home or any other page
 });
